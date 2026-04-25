@@ -1,0 +1,23 @@
+<!--Create a simple program using parentChild property-->
+<!DOCTYPE html>
+<html>
+<body>
+
+    <ul id="myList">
+        <li id="item1">
+            Item One 
+            <button onclick="highlightRow()">Highlight My Row</button>
+        </li>
+    </ul>
+
+    <script>
+        function highlightRow() {
+            const btn = document.querySelector("button");
+            const row = btn.parentElement;
+            row.style.backgroundColor = "yellow";
+            row.style.padding = "10px";
+        }
+    </script>
+
+</body>
+</html>

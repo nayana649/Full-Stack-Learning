@@ -1,0 +1,22 @@
+<!--Create a simple loop with a break statement-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <script>
+            function show() {
+                let i = 1;
+                while(i <= 6) {
+                    if (i % 3 == 0) {
+                        break;
+                    }
+                    i++;
+                }
+                alert(i*i);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>Loops with Break Statements</h1>
+        <button onclick="show()">Click Me</button>
+    </body>
+</html>

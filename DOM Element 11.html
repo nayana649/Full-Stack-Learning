@@ -1,0 +1,21 @@
+<!--Create a simple program using nextElementSibling property-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <div id="one">First Child</div>
+        <div id="two">Second Child</div>
+        <div id="three">Third Child</div>
+        <button onclick="show()">Display</button>
+        <script>
+            function show() {
+                var cont = document.getElementById("one");
+                var child = cont.nextElementSibling;
+                child.style.color = "blue";
+                child.style.backgroundColor = "lightgreen";
+            }
+        </script>
+    </body>
+</html>

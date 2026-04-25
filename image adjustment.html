@@ -1,0 +1,37 @@
+<!--Create a simple program to move and grow an image-->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .box {
+            /* Starting position and size */
+            width: 150px;
+            transition: all 1s; /* This makes it move smoothly */
+            cursor: pointer;
+            margin-left: 0;
+        }
+
+        /* The new position and size after clicking */
+        .move-and-grow {
+            width: 300px;        /* Increases size */
+            margin-left: 200px;  /* Moves it to the right */
+            margin-top: 100px;   /* Moves it down */
+        }
+    </style>
+</head>
+<body>
+    <h3>Click the image to move and grow it!</h3>
+    <img id="myImage" 
+         src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQjCv0ZIUJ_eshTiEOdAjC7nVlp-hH-GfBmBw&s" 
+         class="box" 
+         onclick="animateMe()">
+
+    <script>
+        function animateMe() {
+            // This line simply "toggles" the class on and off
+            document.getElementById("myImage").classList.toggle("move-and-grow");
+        }
+    </script>
+
+</body>
+</html>

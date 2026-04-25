@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OOPS Program - No Inheritance</title>
+        <script>
+            function show() {
+                // Class 1: The Data Holder
+                class Student {
+                    constructor(name, id, marks) {
+                        this.name = name;
+                        this.id = id;
+                        this.marks = marks;
+                    }
+                    details() {
+                        alert("Student: " + this.name + "\nID: " + this.id + "\nMarks: " + this.marks);
+                    }
+                }
+
+                // Class 2: The Logic Processor (No inheritance here)
+                class Staff {
+                    // This function takes the WHOLE student object as an input
+                    checkResult(stud) {
+                        // Accessing 'marks' from the passed 'stud' object
+                        if (stud.marks >= 45) {
+                            alert(stud.name + " has Passed!");
+                        } else {
+                            alert(stud.name + " has Failed!");
+                        }
+                    }
+                }
+
+                // UI Data Collection
+                var a = document.getElementById("name").value;
+                var b = parseInt(document.getElementById("id").value);
+                var c = parseInt(document.getElementById("marks").value);
+
+                // Step 1: Create the Student object
+                var studentObj = new Student(a, b, c);
+                studentObj.details();
+
+                // Step 2: Create the Staff object
+                var staffObj = new Staff();
+
+                // Step 3: Pass the student object to the staff for evaluation
+                staffObj.checkResult(studentObj);
+            }
+        </script>
+    </head>
+    <body>
+        <h2>Independent Class System</h2>
+        <input type="text" id="name" placeholder="Enter your name"/><br><br>
+        <input type="text" id="id" placeholder="Enter your ID"/><br><br>
+        <input type="text" id="marks" placeholder="Enter your marks"/><br><br>
+        <button onclick="show()">Process Result</button>
+    </body>
+</html>

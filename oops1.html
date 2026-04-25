@@ -1,0 +1,31 @@
+<!--Create a simple program of OOPS-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OOPS Example</title>
+        <script>
+            function show()
+            {
+                class Person {
+                    constructor(name, age) {
+                        this.name = name;
+                        this.age = age;
+                    }
+                    details() {
+                        alert(this.name);
+                        alert(this.age);
+                    }
+                }
+                var a = document.getElementsByName("name")[0].value;
+                var b = parseInt(document.getElementById("age").value);
+                var per = new Person(a, b);
+                per.details();
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="name" name="name" placeholder="Enter your name"/>
+        <input type="text" id="age" placeholder="Enter your age"/>
+        <button onclick="show()">Submit</button>
+    </body>
+</html>

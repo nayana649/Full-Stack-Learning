@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Menu</title>
+</head>
+<body onload="makeCaptcha()">
+
+    <h2>Breakfast Menu</h2>
+    <input type="checkbox" name="food" value="40" onclick="calc()"> Idli Vada(40rs) <br>
+    <input type="checkbox" name="food" value="50" onclick="calc()"> Puri (50rs) <br>
+    <input type="checkbox" name="food" value="55" onclick="calc()"> Dosa (55rs) <br>
+    <input type="checkbox" name="food" value="60" onclick="calc()"> Pulao (60rs) <br>
+    <input type="checkbox" name="food" value="50" onclick="calc()"> Upma (50rs) <br>
+    <input type="checkbox" name="food" value="65" onclick="calc()"> Sandwich (65rs) <br>
+    <input type="checkbox" name="food" value="35" onclick="calc()"> Poha (35rs) <br>
+    <input type="checkbox" name="food" value="55" onclick="calc()"> Curd Rice (55rs) <br>
+    
+
+    <h3>Total: <span id="total">0</span>rs</h3>
+
+    <hr>
+
+    <p>Enter this code: <b id="code"></b></p>
+    <input type="text" id="userInput">
+    <button onclick="pay()">Pay Now</button>
+
+    <script>
+        var correctCaptcha = "";
+
+        // 1. Create a simple 4-letter code
+        function makeCaptcha() {
+            var possible = "ABC123";
+            correctCaptcha = ""; 
+            for (var i = 0; i < 4; i++) {
+                correctCaptcha += possible.charAt(Math.floor(Math.random() * possible.length));
+            }
+            document.getElementById("code").innerText = correctCaptcha;
+        }
+
+        // 2. Add up the prices of checked boxes
+        function calc() {
+            var boxes = document.getElementsByName("food");
+            var sum = 0;
+            for (var i = 0; i < boxes.length; i++) {
+                if (boxes[i].checked == true) {
+                    sum = sum + parseInt(boxes[i].value);
+                }
+            }
+            document.getElementById("total").innerText = sum;
+        }
+
+        // 3. Check if everything is correct
+        function pay() {
+            var bill = document.getElementById("total").innerText;
+            var typed = document.getElementById("userInput").value;
+
+            if (bill == "0") {
+                alert("Select food first!");
+            } 
+            else if (typed.toUpperCase() === correctCaptcha) {
+                alert("Success! Paid " + bill + "rs");
+                location.reload(); 
+            } 
+            else {
+                alert("Wrong Captcha! Try again.");
+                makeCaptcha(); // Refresh code
+            }
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,20 @@
+<!--Create a simple program to Add an Element using Append-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <p>1. </p>
+        <p>2. </p>
+        <script>
+            var paragraphs = document.querySelectorAll("p");
+            paragraphs.forEach(function(p) {
+                p.style.fontSize = "40px";
+                p.style.color = "red";
+            })
+            paragraphs[0].append("First Paragraph");
+            paragraphs[1].append("Second Paragraph");
+        </script>
+    </body>
+</html>

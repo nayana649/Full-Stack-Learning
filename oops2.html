@@ -1,0 +1,59 @@
+<!--Create a simple program to obtain details from Student class to Staff class-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OOPS Program</title>
+        <script>
+            function show()
+            {
+                class Student
+                {
+                    constructor(name, id, marks)
+                    {
+                        this.name = name;
+                        this.id = id;
+                        this.marks = marks;
+                    }
+                    details()
+                    {
+                       alert(this.name);
+                       alert(this.id);
+                       alert(this.marks);
+                    }
+                }
+                class Staff extends Student
+                {
+                    constructor(name, id, marks)
+                    {
+                        super(name, id, marks);
+                    }
+                    isPassed()
+                    {
+                        if(this.marks >= 45)
+                        {
+                            alert("Passed");
+                        }
+                        else{
+                            alert("Failed");
+                        }
+                    }
+                }
+
+                var a = document.getElementsByName("name")[0].value;
+                var b = parseInt(document.getElementById("id").value);
+                var c = parseInt(document.getElementById("marks").value);
+                var student = new Student(a, b, c);
+                student.details();
+
+                var staff = new Staff(a, b, c);
+                staff.isPassed();
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="name" name="name" placeholder="Enter your name"/><br><br>
+        <input type="text" id="id" placeholder="Enter your ID"/><br><br>
+        <input type="text" id="marks" placeholder="Enter your marks"/><br><br>
+        <button onclick="show()">Show Details</button>
+    </body>
+</html>

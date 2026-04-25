@@ -1,0 +1,38 @@
+<!--Create a simple program to create an element and add it to the DOM-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <h1>My Webpage</h1>
+        <p>The content below was added by Javascript</p>
+        <button onclick="addElement()">Click</button> 
+        <script>
+            function addElement() {
+                var myBtn = document.createElement("button");
+                myBtn.innerText = "New Button";
+                myBtn.style.backgroundColor = "green";
+                myBtn.style.fontSize = "20px";
+                document.body.appendChild(myBtn);
+            }
+        </script>
+    </body>
+</html>
+
+<!--Alternate Way-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>My Page</title>
+    </head>
+    <body>
+        <script>
+            let data = document.createTextNode("My First Paragraph");
+            let p = document.createElement("p");
+            p.style.color = "blue";
+            p.appendChild(data);
+            document.body.appendChild(p);
+        </script>
+    </body>
+</html>

@@ -1,0 +1,49 @@
+<html>
+<head>
+    <title>Mini Calculator</title>
+    <script>
+        function calculate(operation) {
+            // 1. Capture the inputs and convert to Integers (like Python's int())
+            var a = parseInt(document.getElementById('one').value);
+            var b = parseInt(document.getElementById('two').value);
+            var c;
+
+            // 2. Logic: Perform math based on the clicked button
+            if (operation === 'add') {
+                c = a + b;
+            } else if (operation === 'sub') {
+                c = a - b;
+            } else if (operation === 'mul') {
+                c = a * b;
+            } else if (operation === 'div') {
+                // Safety check: Don't divide by zero!
+                c = (b !== 0) ? (a / b) : "Error: Div by 0";
+            }
+
+            // 3. Display the result
+            var res = document.getElementById('result');
+            res.style.display = 'block'; // Make it visible
+            res.value = c;
+        }
+    </script>
+</head>
+<body>
+
+    <h3>Mini Calculator</h3>
+    <label>Enter two numbers:</label><br>
+    <input type="number" id="one" placeholder="Enter 1st Number" />
+    <input type="number" id="two" placeholder="Enter 2nd Number" />
+    
+    <br/><br/>
+    
+    <input type="radio" name="arithmetic" onclick="calculate('add')"/> Add <br/>
+    <input type="radio" name="arithmetic" onclick="calculate('sub')"/> Sub <br/>
+    <input type="radio" name="arithmetic" onclick="calculate('mul')"/> Mul <br/>
+    <input type="radio" name="arithmetic" onclick="calculate('div')"/> Div <br/>
+    
+    <br/>
+    <label>Result:</label>
+    <input type="text" id="result" style="display:none" readonly />
+
+</body>
+</html>

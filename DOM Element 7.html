@@ -1,0 +1,21 @@
+<!--Create a simple program to replace an element-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <div id="box">
+            <p id="target">This is a paragraph.</p>
+            <button onclick="display()">Replace</button>
+        </div>
+        <script>
+            function display() {
+                const oldItem = document.getElementById('target');
+                const newItem = document.createElement('h1');
+                newItem.innerText = "This is a heading.";
+                oldItem.replaceWith(newItem);
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,19 @@
+<!--Create a simple program to remove an element-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <h1 id="title">Hello World, Focus on Career</h1>
+        <button onclick="deleteHeading()">Delete Heading</button>
+        <script>
+            function deleteHeading() {
+                const head = document.getElementById("title");
+                if (head) {
+                    head.remove();
+                }
+            }
+        </script>
+    </body>
+</html>

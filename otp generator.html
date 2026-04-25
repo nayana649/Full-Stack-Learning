@@ -1,0 +1,24 @@
+<!--Create a simple program for Random OTP Generator-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>OTP Generator</title>
+        <script>
+            function display()
+            {
+                var digits = "0123456789";
+                var otp = "";
+                for(let i = 0; i < 4; i++)
+                {
+                    otp += (Math.floor(Math.random()*digits.length));
+                }
+                document.getElementById('one').value = otp;
+            }
+        </script>
+    </head>
+    <body onload="display()">
+        <label>Your Random OTP:</label>
+        <input type="text" id="one" value=""/>
+        <input type="button" value="OTP" onclick="display()"/>
+    </body>
+</html>

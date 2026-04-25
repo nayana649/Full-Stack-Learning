@@ -1,0 +1,22 @@
+<!--Create a simple program to validate email addressescusing regular experssion-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Email Validation</title>
+        <script>
+            function validateEmail() {
+                var email = document.getElementById("email").value;
+                var regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+                if (regex.test(email)) {
+                    alert("Submitted Email as: " + email);
+                } else {
+                    alert("Invalid email address");
+                }
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="email" placeholder="Enter your Email"/>
+        <button onclick="validateEmail()">Submit</button>
+    </body>
+</html>

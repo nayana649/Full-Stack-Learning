@@ -1,0 +1,55 @@
+<!--Create a simple program for document.getElementById("id") Method-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>CSS METHODS</title>
+    </head>
+    <body>
+        <p id="one">This is a Frontend Class.</p>
+        
+        <button onclick="changeColor()">Change Text Color</button>
+
+        <script>
+            const changeColor = () => {
+                const element = document.getElementById("one");
+                element.style.color = "red";
+                element.style.fontWeight = "bold"; 
+            };
+        </script>
+    </body>
+</html>
+
+<!--Create a simple program for document.querySelector(".class") Method-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QuerySelector Class Example</title>
+    </head>
+    <body>
+        <h2 class="title">Original Title 1</h2>
+        <h2 class="title">Original Title 2</h2>
+        <script>
+            const firstElement = document.querySelector(".title");
+            firstElement.innerText = "I was selected by Class!";
+            firstElement.style.color = "blue";
+        </script>
+    </body>
+</html>
+
+<!--Create a simple program for document.querySelectorAll("tag") Method-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QuerySelectorAll Class Example</title>
+    </head>
+    <body>
+        <li>Item 1</li>
+        <li>Item 2</li>
+        <script>
+        const allItems = document.querySelectorAll("li");
+        allItems.forEach(item => {
+            item.style.fontWeight = "bold";
+        });
+        </script>
+    </body>
+</html>

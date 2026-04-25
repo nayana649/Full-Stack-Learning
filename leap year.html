@@ -1,0 +1,32 @@
+<!--Create a simple program to find leap years in both ascending and descending order-->
+<!DOCTYPE html>
+<html>
+  <head>
+    <script>
+     function show() {
+        var x = parseInt(document.getElementById('one').value);
+        var y = parseInt(document.getElementById('two').value);
+        var arr = [];
+
+        if (x <= y) {
+            // ASCENDING
+            for (let i = x; i <= y; i++) {
+                if (i % 4 == 0) arr.push(i);
+            }
+        } else {
+            // DESCENDING
+            for (let i = x; i >= y; i--) {
+                if (i % 4 == 0) arr.push(i);
+            }
+        }
+        alert("Result: " + arr.join(", ")); 
+    }
+    </script>
+  </head>
+  <body>
+    <label>ENTER START AND END RANGE OF YEARS</label>
+    <input type="text" id="one" placeholder="Start Year" />
+    <input type="text" id="two" placeholder="End Year" />
+    <button onclick="show()">Click</button>
+  </body>
+</html>

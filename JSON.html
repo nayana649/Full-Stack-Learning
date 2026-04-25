@@ -1,0 +1,38 @@
+<!--Create a program to understand parse and stringify methods in Javascript-->
+<!--<!DOCTYPE html>
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <h1>JSON Parse Method in Javascript</h1>
+        <script>
+            function display() {
+                var obj = '{"Name" : "Nayana", "ID" : 1254, "Role" : "Python Developer"}';
+                var jsonObject = JSON.parse(obj);
+                document.write("Name: " + jsonObject.Name + "<br>");
+                document.write("ID: " + jsonObject.ID + "<br>");
+                document.write("Role: " + jsonObject.Role);
+            }
+        </script>
+        <button onclick="display()">Display</button>
+    </body>
+</html>-->
+
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>JSON</title>
+    </head>
+    <body>
+        <h2>JSON Stringify Method in Javascript</h2>
+        <script>
+            function show() {
+                var jsonObject = { Name : "Nayana", ID : 1254, Role : "Python Developer"};
+                var jsonString = JSON.stringify(jsonObject);
+                document.write(jsonString);
+            }
+        </script>
+        <button onclick="show()">Show</button>
+    </body>
+</html>

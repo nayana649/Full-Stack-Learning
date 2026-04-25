@@ -1,0 +1,19 @@
+<!--Create a simple program using firstElementChild property-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <div id="container">
+            <span>First Child</span><br>
+            <span>Second Child</span><br>
+            <span>Third Child</span><br>
+        </div>
+        <script>
+            var cont = document.getElementById("container");
+            var firstChild = cont.firstElementChild;
+            firstChild.style.color = "green";
+        </script>
+    </body>
+</html>

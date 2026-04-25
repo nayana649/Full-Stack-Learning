@@ -1,0 +1,20 @@
+<!--Create a simple program to add an element using Prepend-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <div id="container">
+            <p>First Paragraph</p>
+        </div>
+        <script>
+            const data = document.querySelector("#container");
+            const newElement = document.createElement("p");
+            newElement.textContent = "This is a new paragraph";
+            newElement.style.color = "blue";
+            newElement.style.fontSize = "20px";
+            data.prepend(newElement);
+        </script>
+    </body>
+</html>

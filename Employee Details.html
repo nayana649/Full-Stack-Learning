@@ -1,0 +1,47 @@
+<!--Create a simple program using OOPS to collect Employee Details-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Employee Details</title>
+        <script>
+            function display() {
+                class Employee {
+                    constructor(id, name, age, salary) {
+                        this.id = id;
+                        this.name = name;
+                        this.age = age;
+                        this.salary = salary;
+                    }
+                    details() {
+                        alert(this.id);
+                        alert(this.name);
+                        alert(this.age);
+                        alert(this.salary);
+                    }
+                    isSixDigit() {
+                        if (this.salary >= 100000 && this.salary <= 999999) {
+                            alert("Salary is a six-digit number.");
+                        }
+                        else {
+                            alert("Salary is not a six-digit number.");
+                        }
+                    }
+                }
+                var id = parseInt(document.getElementById("id").value);
+                var name = document.getElementsByName("name")[0].value;
+                var age = parseInt(document.getElementById("age").value);
+                var salary = parseInt(document.getElementById("salary").value);
+                var employee = new Employee(id, name, age, salary);
+                employee.details();
+                employee.isSixDigit();
+            }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="id" placeholder="Enter your ID"/>
+        <input type="text" id="name" name="name" placeholder="Enter your Name"/>
+        <input type="text" id="age" placeholder="Enter your Age"/>
+        <input type="text" id="salary" placeholder="Enter your Salary"/>
+        <button onclick="display()">Display Details</button>
+    </body>
+</html>

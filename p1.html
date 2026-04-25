@@ -1,0 +1,19 @@
+<!--Create a simple form with username, password, phone number -> button-->
+<!Doctype html>
+<html>
+    <head>
+        <title>Application Page</title>
+    </head>
+    <body>
+        <h1>Application Form</h1>
+        <form method="Post">
+            <label for="username">Username:</label>
+            <input type="text" id="username" name="username" pattern="[A-Za-z ]{0,25}" required><br><br>
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password"required><br><br>
+            <label for="phone">Mobile Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" required><br><br>
+            <input type="submit" value="Submit" onclick="alert('Form Submitted Successfully!!!')">
+        </form>
+    </body>
+</html>

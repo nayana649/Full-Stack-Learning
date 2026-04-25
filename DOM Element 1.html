@@ -1,0 +1,21 @@
+<!--Create a simple program for getElementsByTagName-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <p>Paragraph 1</p>
+        <p>Paragraph 2</p>
+        <p>Paragraph 3</p>
+        <button onclick="changeColors()">Click Me!!</button>
+        <script>
+            function changeColors() {
+                var paragraphs = document.getElementsByTagName("p");
+                paragraphs[0].style.color = "red";
+                paragraphs[1].style.color = "green";
+                paragraphs[2].style.color = "blue";           
+            }
+        </script>
+    </body>
+</html>

@@ -1,0 +1,22 @@
+<!--Create a simple program to validate date format using regular expression-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Date Validation</title>
+        <script>
+            function validateDate() {
+                var date = document.getElementById("date").value.trim();
+                var regex = /^(0[1-9]|1[0-2])[- /](0[1-9]|[12]\d|3[01])[- /]\d{4}$/;
+                if (regex.test(date)) {
+                    alert("Submitted Date as: " + date);
+                } else {
+                    alert("Invalid Date Format");
+                }
+                }
+        </script>
+    </head>
+    <body>
+        <input type="text" id="date" placeholder="Enter a date (MM-DD-YYYY)"/>
+        <button onclick="validateDate()">Submit</button>
+    </body>
+</html>

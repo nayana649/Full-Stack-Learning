@@ -1,0 +1,23 @@
+<!--Create a simple program to accept the text box only Lowercase Alphabets-->
+<!DOCTYPE html>
+<html>
+<head>
+    <style>input:invalid { border: 2px solid red; } input:valid { border: 2px solid green; }</style>
+</head>
+<body>
+    <form onsubmit="alert('JS Form Submitted'); return false;">
+        <h3>1. JS Filter Method</h3>
+        <input type="text" id="jsIn" maxlength="4" size="4" placeholder="a-z only"
+               oninput="this.value = this.value.replace(/[^a-z]/g, '')">
+        <button type="submit">Submit JS</button>
+    </form>
+
+    <hr>
+
+    <form onsubmit="alert('HTML Form Submitted'); return false;">
+        <h3>2. HTML Pattern Method</h3>
+        <input type="text" pattern="[a-z]{1,4}" maxlength="4" size="4" placeholder="a-z only" required>
+        <button type="submit">Submit HTML</button>
+    </form>
+</body>
+</html>

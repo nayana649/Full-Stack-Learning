@@ -1,0 +1,20 @@
+<!--Create a simple program of File Tag-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>>File Tag Example</title>
+        <script>
+            function show()
+            {
+                var a = document.getElementById("my file").files[0].name;
+                alert(a);
+            }
+        </script>
+    </head>
+    <body>
+        <h1>File Tag Example</h1>
+        <label for="my file">Choose a File:</label>
+        <input type="file" id="my file"/>
+        <input type="button" value="Submit" onclick="show()"/>
+    </body>
+</html>

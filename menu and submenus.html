@@ -1,0 +1,186 @@
+<!--Create a simple webpage to form Menus and Submenus of a Website related to Programming Courses-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Technical Courses</title>
+        <style>
+            body {
+                background-color: white;
+            }
+
+            ul {
+                list-style: none;
+                background-color: lightgreen;
+                overflow: visible;
+                display: flex;
+            }
+
+            ul li {
+                float: left;
+                position: relative;
+            }
+
+            ul li a {
+                display: block;
+                text-decoration: none;
+                padding: 15px 83px;
+                color: black;
+                font-weight: bold;
+            }
+
+            ul li a:hover {
+                background-color: burlywood;
+            }
+
+            .submenu {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                background-color: magenta;
+                min-width: 220px;
+                box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .submenu li {
+                float: none;
+                width: 100%;
+            }
+
+            .submenu li a {
+                padding: 12px 20px;
+                border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            }
+
+            ul li:hover .submenu {
+                display: block;
+            }
+
+            .nested-submenu {
+                display: none;
+                position: absolute;
+                top: 0;
+                left: 100%; /* Pushes it to the right of the parent li */
+                background-color: darkmagenta; 
+                min-width: 200px;
+                box-shadow: 4px 8px 16px rgba(0, 0, 0, 0.2);
+            }
+
+            .submenu li:hover > .nested-submenu {
+                display: block;
+            }
+
+
+            .submenu li a, .nested-submenu li a {
+                color: white;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>Technical Courses and Internships</h1>
+        <ul>
+            <li><a href="" class="parent-link">Home</a>
+                <ul class="submenu">
+                <li><a href="">Student Profile</a></li>
+                <li><a href="">Technical Stack</a></li>
+                <li><a href="">Course Materials</a></li>
+                <li><a href="">Current Internships</a></li>
+                </ul>
+            </li>
+
+            <li><a href="" class="parent-link">Courses</a>
+                <ul class="submenu">
+                <li><a href="" class="parent-link">Web Development</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">HTML/CSS</a></li>
+                        <li><a href="">JavaScript</a></li>
+                        <li><a href="">React</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="parent-link">AIML</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">Machine Learning</a></li>
+                        <li><a href="">Deep Learning</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="parent-link">Data Science</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">Python for Data Science</a></li>
+                        <li><a href="">Statistical Analysis</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="parent-link">Embedded Systems</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">Introduction to Embedded Systems</a></li>
+                        <li><a href="">Microcontrollers</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="parent-link">VLSI</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">Physical Design</a></li>
+                        <li><a href="">VLSI Testing</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="parent-link">Cloud Computing</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">Cloud Fundamentals</a></li>
+                        <li><a href="">AWS</a></li>
+                        <li><a href="">Azure</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+
+            <li><a href="" class="parent-link">Internships</a>
+                <ul class="submenu">
+                <li><a href="" class="parent-link">Software Internships</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">Full Stack Development</a></li>
+                        <li><a href="">AIML Engineer</a></li>
+                        <li><a href="">UI/UX Designer</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="" class="parent-link">Hardware Internships</a>
+                    <ul class="nested-submenu">
+                        <li><a href="">VLSI Internships</a></li>
+                        <li><a href="">Embedded Systems Internships</a></li>
+                    </ul>
+                </li>
+                </ul>
+            </li>
+
+            <li><a href="">Resources</a>
+                <ul class="submenu">
+                <li><a href="">Study Materials</a></li>
+                <li><a href="">Project Report</a></li>
+                <li><a href="">Documentation</a></li>
+                <li><a href="">Tools & Software</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="">Careers</a>
+                <ul class="submenu">
+                <li><a href="">Job Opportunities</a></li>
+                <li><a href="">Hiring Partners</a></li>
+                <li><a href="">Success Stories</a></li>
+                </ul>
+            </li>
+            
+            <li><a href="">About Us</a>
+                <ul class="submenu">
+                <li><a href="">Our Vision</a></li>
+                <li><a href="">Our Mission</a></li>
+                <li><a href="">Technical Expertise</a></li>
+                <li><a href="">Contact Support</a></li>
+                </ul>
+            </li>    
+        </ul>
+    </body>
+</html>

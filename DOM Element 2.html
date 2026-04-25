@@ -1,0 +1,23 @@
+<!--Create a simple program for getElementsByClassName-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>DOM Element</title>
+    </head>
+    <body>
+        <p class="color">Paragraph 1</p>
+        <p class="color">Python</p>
+        <p class="color">Java</p>
+        <p class="color">C++</p>
+        <button onclick="display()">CLick</button>
+        <script>
+            function display() {
+                const node = document.getElementsByClassName("color");
+                node[0].style.color = "orange";
+                node[1].style.color = "green";
+                node[2].style.color = "blue";
+                node[3].style.color = "red";
+            }
+        </script>
+    </body>
+</html>
