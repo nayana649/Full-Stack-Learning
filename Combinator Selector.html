@@ -1,0 +1,86 @@
+<!--Create a simple programs for each type of Combinator Selector-->
+<!--Child Combinator-->
+<html>
+    <head>
+        <title>Combinator CSS Selector</title>
+        <style>
+            div > p {
+                color: red;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>First Line</p>
+            <p>Second Line</p>
+            <section>
+                <p>First Paragraph</p>
+            </section>
+        </div>
+    </body>
+</html>
+
+<!--Descendant CSS Combinator-->
+<html>
+    <head>
+        <style>
+            div p {
+                color: red;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <div>
+            <p>First Child</p>
+            <p>Second Child</p>
+            <section>
+                <p>Last Child</p>
+            </section>
+        </div>
+    </body>
+</html>
+
+<!--Next Sibling CSS Combinator Selector-->
+<html>
+    <head>
+        <style>
+            h1 + p {
+                color: red;
+                font-size: 40px;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Project Title</h1>
+        <p>AI Driven Battery Intelligence System</p>
+
+        <p>RAG based SOP Assistant</p>
+
+        <h1>Internship Domain</h1>
+        <p>Python Developer at Infotact Solutions</p>
+    </body>
+</html>
+
+<!--Subsequent Sibling CSS Combinator Selector-->
+<html>
+    <head>
+        <style>
+            h1 ~ p {
+                color: blue;
+                font-size: 40px;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Project Title</h1>
+        <p>RAG based SOP Assistant</p>
+        <p>VoiceOps Sentinel</p>
+
+        <h1>Internship</h1>
+        <p>Vision Astra EV Academy</p>
+
+    </body>
+</html>

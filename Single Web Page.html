@@ -1,0 +1,102 @@
+<!--Create the 10 html tags in a single Web Page-->
+<!--Tags are listed below-->
+<!--1) Audio 2) Video 3) Canvas 4) Form, fieldset and Legend 5) Iframes 6) Header and Footer
+    7) Hr 8) Output 9) Nav 10) Map-->
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Tags</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>HTML5 Advanced Tags Demo</title>
+        <style>
+            body { font-family: sans-serif; line-height: 1.6; margin: 0; padding: 0; }
+            header, footer { background: #333; color: white; text-align: center; padding: 1rem; }
+            nav { background: #444; padding: 0.5rem; text-align: center; }
+            nav a { color: white; margin: 0 15px; text-decoration: none; }
+            section { padding: 20px; border-bottom: 1px solid #ddd; }
+            canvas { border: 1px solid #000; background: #f0f0f0; }
+            fieldset { border: 2px solid #007bff; padding: 20px; margin-top: 10px; }
+            legend { font-weight: bold; color: #007bff; padding: 0 10px; }
+        </style>
+    </head>
+    <body>
+        <h1>10 HTML Tags in a Single Web Page</h1>
+        <header>
+        <h1>Full-Stack Engineering Showcase</h1>
+        <p>Demonstrating HTML5 Semantic and Multimedia Elements</p>
+    </header>
+
+    <nav>
+        <a href="#multimedia">Multimedia</a>
+        <a href="#graphics">Graphics</a>
+        <a href="#forms">Forms</a>
+        <a href="#embeds">Embeds</a>
+    </nav>
+
+    <hr>
+
+    <section id="multimedia">
+        <h2>1 & 2. Multimedia Elements</h2>
+        <p>Audio Player:</p>
+        <audio controls>
+            <source src="https://www.w3schools.com/html/horse.mp3" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+
+        <p>Video Player:</p>
+        <video width="320" height="240" controls>
+            <source src="https://www.w3schools.com/html/mov_bbb.mp4" type="video/mp4">
+            Your browser does not support the video element.
+        </video>
+    </section>
+
+    <section id="graphics">
+        <h2>3. Canvas API</h2>
+        <canvas id="myCanvas" width="200" height="100"></canvas>
+        <script>
+            var c = document.getElementById("myCanvas");
+            var ctx = c.getContext("2d");
+            ctx.fillStyle = "#FF0000";
+            ctx.fillRect(20, 20, 150, 60);
+            ctx.fillStyle = "white";
+            ctx.fillText("Canvas Drawing", 50, 55);
+        </script>
+    </section>
+
+    <section id="forms">
+        <h2>4 & 8. Form with Output Calculation</h2>
+        <form oninput="x.value=parseInt(a.value)+parseInt(b.value)">
+            <fieldset>
+                <legend>Internship Stipend Calculator</legend>
+                <label for="a">Base Pay:</label>
+                <input type="number" id="a" value="5000"> +
+                <label for="b">Bonus:</label>
+                <input type="number" id="b" value="1000">
+                <br><br>
+                <strong>Total Estimate: </strong>
+                <output name="x" for="a b">6000</output>
+            </fieldset>
+        </form>
+    </section>
+
+    <section id="embeds">
+        <h2>5. Iframes (Embedding external content)</h2>
+        <iframe src="https://www.wikipedia.org" width="100%" height="300" title="Wiki Frame"></iframe>
+    </section>
+
+    <section>
+        <h2>10. Image Map</h2>
+        <p>Click the sun or the planets in this sample image map:</p>
+        <img src="https://www.w3schools.com/html/workplace.jpg" alt="Workplace" usemap="#workmap" width="400" height="379">
+        <map name="workmap">
+            <area shape="rect" coords="34,44,270,350" alt="Computer" href="https://www.google.com">
+            <area shape="circle" coords="337,300,44" alt="Cup of Coffee" href="https://www.wikipedia.org">
+        </map>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Nayana | Electronics & Communication Engineer</p>
+    </footer>
+    </body>
+</html>

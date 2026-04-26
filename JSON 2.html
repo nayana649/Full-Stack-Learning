@@ -1,0 +1,31 @@
+
+<html>
+  <head>
+    <title>Json strings</title>
+    <script>
+      function display()
+      {
+        const data = [
+          { name: "user1", city: "chennai" },
+          { name: "user2", city: "salem" }
+        ];
+
+        const res = JSON.stringify(data);
+        alert(typeof res); 
+
+        const obj = JSON.parse(res);
+        let output = "";
+
+        for (let i = 0; i < obj.length; i++)
+        {
+          output += obj[i].name + "<br>";  
+        }
+        document.getElementById('para').innerHTML = output;
+      }
+    </script>
+  </head>
+
+  <body onload="display()">
+    <p id="para"></p>
+  </body>
+</html>
