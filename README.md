@@ -1,18 +1,23 @@
 # 🚀 Full-Stack Development Journey
 
-### 🛠 Technical Summary
-A collection of web engineering projects bridging the gap between hardware logic and software architecture. This repository documents my evolution from core frontend design to interactive application logic.
+🛠 Technical Summary
+A collection of web engineering projects focused on building robust, scalable interfaces. This repository documents my evolution from static frontend design to complex application logic, emphasizing the intersection of Embedded Logic and Software Architecture.
 
-### 🧰 Tech Stack
-* **Structure:** HTML5 (Semantic tags, Forms, Tables)
-* **Styling:** CSS3 (Flexbox, Grid, Responsive Design)
-* **Logic:** JavaScript ES6+ (DOM Manipulation, JSON Serialization)
-* **Library:** jQuery (Event handling, Simplified DOM, Animations)
+🧰 Tech Stack
+Structure: HTML5 (Semantic tags, Advanced Forms, Layout Tables)
 
-### 📁 Learning Modules
-- **DOM & jQuery Lab:** 10+ modules focusing on dynamic element manipulation and interactive UI.
-- **Data Protocols:** Practical use of `JSON.parse()` and `JSON.stringify()` for data management.
-- **Validation Systems:** Client-side email, date, and form validation logic.
+Styling: CSS3 (Flexbox, Grid, Responsive Design Systems)
 
-### ⚡ Professional Context
-Currently an **Electronics and Communication Engineering (ECE)** student and **Python Developer Intern**. I am applying these frontend skills to visualize data and build interfaces for intelligent systems (RAG & EV Technology).
+Logic: JavaScript ES6+ (Asynchronous Programming, DOM Manipulation, JSON)
+
+Library: jQuery (Event orchestration, Animation, Simplified DOM API)
+
+📁 Learning Modules
+Dynamic UI Lab: 10+ modules focused on real-time element manipulation and state-driven interfaces.
+
+Data Serialization: Implementation of efficient data exchange using JSON protocols for backend-to-frontend communication.
+
+Validation Architectures: Robust client-side logic for data integrity, including multi-factor form and input validation.
+
+⚡ Professional Context
+As an Electronics and Communication Engineering (ECE) student and Software Development Intern, I utilize these frontend skills to architect data visualization tools and interactive control panels. My goal is to create seamless user interfaces for complex automated systems and intelligent software solutions.
